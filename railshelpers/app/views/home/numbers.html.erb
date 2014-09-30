@@ -1,0 +1,17 @@
+<p>The stock price is</p>
+<p>Without helper: </p>
+<h4><%=@amount %></h4>
+<p>With number_to_currency helper: </p>
+<h4><%= number_to_currency(@amount) %></h4>
+
+<p>This large number is:</p>
+<p>Without helper:</p>
+<h4><%= @large_number %></h4>
+<p>With number_to_human</p>
+<h4><%= number_to_human(@large_number) %></h4>
+
+<p>This large number is:</p>
+<p>Without helper:</p>
+<h4><%= @phone %></h4>
+<p>With number_to_phone</p>
+<h4><%= number_to_phone(@phone) %></h4>
