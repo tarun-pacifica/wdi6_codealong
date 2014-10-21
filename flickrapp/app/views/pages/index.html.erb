@@ -1,0 +1,9 @@
+<h3>Flickr</h3>
+
+<div>
+  <%= text_field_tag 'query', nil, :autofocus => true, :placeholder => 'enter search' %>
+  <%= button_tag 'search flickr', :id => 'search' %>
+  <%= button_tag 'clear photos', :id => 'clear' %>
+</div>
+<div></div>
+<div id="images"></div>
