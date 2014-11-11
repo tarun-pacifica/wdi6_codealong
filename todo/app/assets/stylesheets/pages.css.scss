@@ -4,14 +4,22 @@
 
 
 .hero {
-  background-image: url(http://hmdfilms.com/wp-content/uploads/2014/08/batman-vs-superman-opening-scene-and-lexcorp-details-revealed.jpg);
+  background-image: url(http://us.cdn001.fansshare.com/photos/stevemcqueen/steve-mcqueen-king-of-cool-atlas-gallery-1863263635.jpg);
   width: 95%;
-  min-height: 30em;
+  min-height: 50em;
   border: 5px solid black;
   margin: 100px 0 20px 0;
 }
 
 .about {
   min-height: 1000em;
+}
 
+.bubble {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  border: 1px solid pink;
+  border-radius: 100%;
+  background-color: rgba(0,0,200,0.1);
 }
