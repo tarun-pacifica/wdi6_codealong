@@ -26,21 +26,30 @@ class Forex
 # cleanses the currency
 # incorporates the other methods
 
-    def cleanse(deposit, ratios)
+  def cleanse(deposit, ratios)
     sumtotal = 0
+
     deposit.map do |money|
      unit = money.match(/^[\D|$]{2,3}/).to_s
+
      rate = ratios[unit].to_f
-     regexxer(money)
+
+     gsubber(money)
+
      money = ((money.to_f)*rate).round(2)
+
      sumtotal = sumtotal + money
+
      puts_subtotal(unit,money,rate,sumtotal)
+
     end
+
     puts_grandtotal(sumtotal)
+
   end
 
 # apply RegEx methods to money
-  def regexxer(money)
+  def gsubber(money)
      money.split(/^[\D|$]{2,3}/).pop
      money.gsub!(/^[\D|$]{2,3}/,'')
      money.gsub!(/k$/i,'000')

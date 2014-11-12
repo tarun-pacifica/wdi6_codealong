@@ -25,6 +25,7 @@ class Forex
   private
 # displays running total
   def puts_subtotal(unit,money,rate,sumtotal)
+     #sprintf for formatting
      puts "Convert: #{unit}#{money} at #{rate}x ............Running total: AUD#{sumtotal}"
   end
 #displays grand total at end of loop

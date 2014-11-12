@@ -1,0 +1,33 @@
+task :default => 'morning:get_ready'
+
+namespace :morning do
+  desc 'Turn off the alarm'
+  task :turn_off_alarm do
+    puts 'turn off alarm'
+  end
+
+  desc 'Groom Yourself'
+  task :groom_self do
+    puts 'Brush teeth'
+    puts 'Beard'
+    puts 'underarms'
+  end
+
+  desc 'Coffee likee'
+  task :make_coffee do
+    cups = 2
+    puts "Made #{cups} cups."
+  end
+
+  desc 'get ready'
+  task :get_ready => [:turn_off_alarm, :groom_self, :make_coffee] do
+    puts 'Ready for the day'
+  end
+end
+
+namespace :afternoon do
+    task :make_coffee do
+      Rake::Task['morning:make_coffee'].invoke
+      puts 'cafe'
+    end
+  end
